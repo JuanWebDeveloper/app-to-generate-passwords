@@ -1,0 +1,268 @@
+/*===========================
+<|-Global Styles          -|>
+===========================*/
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+*::selection, *::-moz-selection {
+    background: #33257e;
+    color: #CDCDCD;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #212139;
+    color: #CDCDCD;
+}
+
+.container {
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+/*===========================
+<|-Title Styles           -|>
+===========================*/
+.title {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.title h1 {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.title h1 i {
+    position: relative;
+    font-size: 35px;
+    top: -5px;
+    line-height: 40px;
+}
+/*===========================
+<|-Rows And Cols Styles   -|>
+===========================*/
+.app .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.app .col {
+    width: 50%;
+}
+
+/*===========================
+<|-Inputs Styles          -|>
+===========================*/
+.app label {
+    line-height: 40px;
+}
+
+.app input {
+    text-align: center;
+    border: none;
+}
+
+/*===========================
+<|-Buttons Styles         -|>
+===========================*/
+.app .btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    vertical-align: top;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #684BFF;
+    color: #CDCDCD;
+    transition: all .3s ease-in;
+}
+
+.app .btn:hover {
+    background: #B4A5FF;
+}
+
+.app .btn.false{
+	background: #33257E;
+}
+
+/*===========================
+<|-Character Number Styles-|>
+===========================*/
+.app .numberOfCharacters .buttons div {
+    width: 100%;
+}
+
+.app .numberOfCharacters .buttons div:nth-child(1) button {
+    border-radius: 5px 0 0 5px;
+}
+
+.app .numberOfCharacters input {
+    cursor: default;
+    width: 100%;
+    height: 40px;
+    background: #33257e;
+    color: #CDCDCD;
+}
+
+.app .numberOfCharacters .buttons div:nth-child(3) button {
+    border-radius: 0 5px 5px 0;
+}
+
+.app .numberOfCharacters .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*===========================
+<|-Password Styles        -|>
+===========================*/
+.app .row.generate {
+    margin-bottom: 10px;
+}
+
+.app .row.generate .col:nth-child(1) {
+    width: 30%;
+}
+
+.app .row.generate .col:nth-child(2) {
+    width: 65%;
+}
+
+.app .row.generate .btnGenerate {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 0;
+    line-height: 40px;
+}
+
+.app .row.generate .btnGenerate::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 13px;
+    right: -7px;
+    transform: rotate(45deg);
+    background: #684BFF;
+    transition: all .3s ease-in;
+}
+
+.app .row.generate .btnGenerate:hover::after {
+    background: #B4A5FF;
+}
+
+.app .row.generate .btnGenerate i {
+    position: relative;
+    font-size: 20px;
+    margin-left: 20px;
+    top: -1px;
+}
+
+.app .row.generate .inputPassword {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    outline: none;
+    line-height: 40px;
+    background: transparent;
+    color: #CDCDCD;
+    transition: all .3s ease-in;
+}
+
+.app .row.generate .inputPassword:hover {
+    border: 1px solid rgba(255, 255, 255, .5);    
+}
+
+.app .row.generate .inputPassword::selection {
+    background: #212139;
+}
+
+/*===========================
+<|-Copied Alert Styles    -|>
+===========================*/
+.app .row.alert {
+    justify-content: flex-end;
+}
+
+.app .row.alert .col {
+    width: 65%;
+}
+
+.app .row.alert .alertCopied {
+    text-align: center;
+    color: rgba(255, 255, 255, 0);
+    transition: all .3s ease-in;
+}
+
+.app .row.alert .alertCopied.active {
+    color: rgba(255, 255, 255, 1);
+}
+
+.app .row.alert .alertCopied p {
+    font-size: 12px;
+}
+
+.app .row.alert .alertCopied p i {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+/*===========================
+<|-Responsive Styles      -|>
+===========================*/
+/*====================================================================
+<|-Movil (XS revisamos en 320px)                                   -|>
+====================================================================*/
+@media screen and (max-width: 600px){
+    /*===========================
+    <|-Rows And Cols Styles   -|>
+    ===========================*/
+    .app .row {
+        flex-direction: column;
+        margin-bottom: 28px;
+    }
+
+    .app .row .col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /*===========================
+    <|-Password Styles        -|>
+    ===========================*/
+    .app .row.generate {
+        border-top: 1px solid rgba(255, 255, 255, .25);
+        padding-top: 40px;
+    }
+
+    .app .row.generate .col:nth-child(1),
+    .app .row.generate .col:nth-child(2) {
+        width: 100%;
+    }
+
+    .app .row.generate .btnGenerate::after {
+        top: auto;
+        left: 50%;
+        right: 50%;
+        bottom: -7px;
+    }
+}

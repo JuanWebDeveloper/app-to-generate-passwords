@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/png">
+    <!--===========================
+    <|-Fonts And Icons          -|>
+    ============================-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!--===========================
+    <|-Custom CSS               -|>
+    ============================-->
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Password Generator <i class="fas fa-lock"></i></h1>
+        </div>
+        
+        <form action="" class="app" id="app">
+            <!--===========================
+            <|-Number Of Characters     -|>
+            ============================-->
+            <div class="row numberOfCharacters">
+                <div class="col">
+                    <label for="numberOfCharacters">Number Of Characters:</label>
+                </div>
+
+                <div class="col buttons">
+                    <div><button class="btn" id="btnSubtract"><i class="fas fa-minus"></i></button></div>
+                    <div><input type="text" id="numberOfCharacters" readonly value="8"></div>
+                    <div><button class="btn" id="btnAdd"><i class="fas fa-plus"></i></button></div>
+                </div>
+            </div>
+
+            <!--===========================
+            <|-Include Symbols          -|>
+            ============================-->
+            <div class="row symbols">
+                <div class="col">
+                    <label for="symbols">¿Include Symbols?</label>
+                </div>
+
+                <div class="col">
+                    <button class="btn" id="symbols"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+
+            <!--===========================
+            <|-Include Numbers          -|>
+            ============================-->
+            <div class="row numbers">
+                <div class="col">
+                    <label for="numbers">¿Include Numbers?</label>
+                </div>
+
+                <div class="col">
+                    <button class="btn" id="numbers"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+
+            <!--===========================
+            <|-Include Uppercases       -|>
+            ============================-->
+            <div class="row uppercases">
+                <div class="col">
+                    <label for="uppercases">¿Include Uppercases?</label>
+                </div>
+
+                <div class="col">
+                    <button class="btn" id="uppercases"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+
+            <!--===========================
+            <|-Generate Password        -|>
+            ============================-->
+            <div class="row generate">
+                <div class="col">
+                    <button class="btn btnGenerate" id="generate">Generate<i class="fas fa-lock"></i></button>
+                </div>
+
+                <div class="col">
+                    <input type="text" class="inputPassword" id="inputPassword" readonly>
+                </div>
+            </div>
+
+            <!--===========================
+            <|-Copied Text Alert        -|>
+            ============================-->
+            <div class="row alert">
+                <div class="col">
+                    <div class="alertCopied" id="copied">
+                        <p><i class="fas fa-copy"></i>Copied Text</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--===========================
+    <|-Custom JavaScript        -|>
+    ============================-->
+    <script src="./script/app.js"></script>
+</body>
+</html>
